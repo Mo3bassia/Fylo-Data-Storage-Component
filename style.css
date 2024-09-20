@@ -4,6 +4,7 @@
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+  font-family: Raleway;
 }
 
 :root {
@@ -11,7 +12,7 @@
 
   /* Primary colors */
 
-  --clr-gradient: hsl(6, 100%, 80%) to hsl(335, 100%, 65%);
+  --clr-gradient: hsl(6, 100%, 80%), hsl(335, 100%, 65%);
 
   /* Neutral colors */
 
@@ -85,4 +86,83 @@ body {
 
 .container .left .icons .icon img {
   width: 25px;
+}
+
+.container > .right {
+  color: var(--Pale-Blue);
+  width: 37rem;
+}
+
+.container > .right .progress {
+  position: relative;
+  width: 100%;
+  height: 17px;
+  border-radius: 50vw;
+  background-color: var(--Very-Dark-Blue);
+  padding: 2px;
+  margin-top: 20px;
+}
+
+.container > .right .progress .notice {
+  position: absolute;
+  right: 0;
+  top: calc(-100% - 120px);
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 700;
+  color: var(--Grayish-Blue);
+}
+
+.container > .right .progress .notice:after {
+  content: "";
+  position: absolute;
+  bottom: -20px;
+  width: 0;
+  height: 0;
+  right: 0;
+  border: 30px solid #0f0;
+  border-color: transparent #fff transparent transparent;
+}
+
+.container > .right .progress .notice span {
+  font-size: 40px;
+  font-weight: 700;
+  color: var(--Very-Dark-Blue);
+}
+
+.container > .right .progress .colored {
+  background-image: linear-gradient(to right, var(--clr-gradient));
+  width: 85%;
+  height: 100%;
+  border-radius: 50vw;
+  position: relative;
+}
+
+.container > .right .progress .colored:after {
+  content: "";
+  background-color: #fff;
+  border-radius: 50%;
+  right: 3px;
+  top: 50%;
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  transform: translateY(-50%);
+}
+
+.container > .right .description span {
+  font-weight: bold;
+  color: var(--Pale-Blue);
+}
+
+.container > .right .state-minandmax {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+  font-weight: bold;
 }
