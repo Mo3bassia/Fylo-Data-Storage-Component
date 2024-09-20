@@ -15,10 +15,10 @@
 
   /* Neutral colors */
 
-  --clr-light-blue-100: 243, 100%, 93%;
-  --clr-light-blue-300: 229, 7%, 55%;
-  --clr-drk-blue-600: 228, 56%, 26%;
-  --clr-drk-blue-900: 229, 57%, 11%;
+  --Pale-Blue: hsl(243, 100%, 93%);
+  --Grayish-Blue: hsl(229, 7%, 55%);
+  --Dark-Blue: hsl(228, 56%, 26%);
+  --Very-Dark-Blue: hsl(229, 57%, 11%);
 
   /* Font Size */
   --primary-size: 14px;
@@ -30,4 +30,20 @@
 }
 .attribution a {
   color: hsl(228, 45%, 44%);
+}
+
+body {
+  min-height: 100vh;
+  background-color: var(--Very-Dark-Blue);
+  background-image: url(./images/bg-mobile.png);
+  background-size: cover;
+  background-position: bottom;
+  background-repeat: no-repeat;
+}
+
+@media (min-width: 992px) {
+  body {
+    background-image: url(./images/bg-desktop.png);
+    background-size: contain;
+  }
 }
