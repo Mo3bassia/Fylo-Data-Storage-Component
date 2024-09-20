@@ -39,6 +39,8 @@ body {
   background-size: cover;
   background-position: bottom;
   background-repeat: no-repeat;
+  display: grid;
+  place-items: center;
 }
 
 @media (min-width: 992px) {
@@ -46,4 +48,41 @@ body {
     background-image: url(./images/bg-desktop.png);
     background-size: contain;
   }
+}
+
+.container {
+  display: flex;
+  gap: 30px;
+  align-items: flex-end;
+}
+
+.container > * {
+  background-color: var(--Dark-Blue);
+  padding: 45px;
+  border-radius: 15px;
+}
+
+.container .left {
+  border-top-right-radius: 100px;
+}
+
+.container .left .icons {
+  display: flex;
+  gap: 20px;
+  margin-top: 30px;
+  align-items: center;
+  margin-right: 100px;
+}
+
+.container .left .icons .icon {
+  background-color: var(--Very-Dark-Blue);
+  display: grid;
+  place-items: center;
+  width: 60px;
+  height: 60px;
+  border-radius: 15px;
+}
+
+.container .left .icons .icon img {
+  width: 25px;
 }
