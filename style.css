@@ -82,10 +82,16 @@ body {
   width: 60px;
   height: 60px;
   border-radius: 15px;
+  cursor: pointer;
 }
 
 .container .left .icons .icon img {
   width: 25px;
+  transition: 0.5s;
+}
+
+.container .left .icons .icon:hover img {
+  transform: scale(1.2);
 }
 
 .container > .right {
@@ -106,7 +112,7 @@ body {
 .container > .right .progress .notice {
   position: absolute;
   right: 0;
-  top: calc(-100% - 120px);
+  top: calc(-100% - 100px);
   background-color: #fff;
   padding: 20px;
   border-radius: 10px;
@@ -116,6 +122,16 @@ body {
   gap: 10px;
   font-weight: 700;
   color: var(--Grayish-Blue);
+  animation: upanddown 0.9s infinite alternate linear;
+}
+
+@keyframes upanddown {
+  0% {
+    transform: translateY(-5px);
+  }
+  100% {
+    transform: translateY(5px);
+  }
 }
 
 .container > .right .progress .notice:after {
